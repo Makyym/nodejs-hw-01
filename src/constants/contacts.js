@@ -1,1 +1,4 @@
-export const PATH_DB = '../nodejs-hw-01/src/db/db.json';
+import path from 'node:path';
+
+const mainFolder = path.join(process.cwd());
+export const PATH_DB = path.join(mainFolder, 'src', 'db', 'db.json');

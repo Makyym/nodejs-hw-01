@@ -3,7 +3,7 @@ import fs from 'node:fs';
 
 export const readContacts = async () => {
     try {
-        const data = await fs.readFile(PATH_DB);
+        const data = await fs.readFile(PATH_DB, 'utf8');
         console.log(data);
         return data;
     } catch (error) {

@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import { createFakeContact } from '../utils/createFakeContact.js';
 
 const generateContacts = async (number) => {
-    const valueDb = await fs.readFile(PATH_DB);
+    const valueDb = await fs.readFile(PATH_DB, 'utf8');
     let array = [];
     if (valueDb) {
         array = JSON.parse(valueDb);
